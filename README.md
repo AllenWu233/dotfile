@@ -1,7 +1,6 @@
 ## Personal Dotfile
 
-I use ArchLinux as Linux distribution and i3 as windows manager, this repo is my config. The packages I explicitly installed are in packages.txt. You can use <code>~/.config/i3/nord.sh</code>
-and <code>~/.config/i3/cat.sh</code> to change the theme.
+I use ArchLinux as Linux distribution and i3 as windows manager, this repo is my config. The packages I explicitly installed are in packages.txt. You can use <code>~/.config/i3/nord.sh</code> and <code>~/.config/i3/cat.sh</code> to change the theme.
 
 ## Shot
 
