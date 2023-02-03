@@ -43,3 +43,5 @@ fcitx5 & diswon
 pkill xob
 
 sh ~/.config/i3/start.sh
+
+pkill dunst

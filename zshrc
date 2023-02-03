@@ -1,7 +1,7 @@
 # zmodload zsh/zprof
 
 export HISTSIZE=1000
-export EDITOR="vim"
+export EDITOR="nvim"
 
 autoload -U compaudit compinit
 autoload -U compinit && compinit
@@ -24,10 +24,9 @@ source /usr/share/autojump/autojump.zsh
 ######################## 
 
 
-# https://github.com/yaocccc/omz 
-export OMZ=/home/charles/.zsh/omz
+
 source ~/.zsh/fzf-tab/fzf-tab.plugin.zsh
-source ~/.zsh/omz/config/fzf.zsh
+source ~/.zsh/fzf.zsh
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
@@ -72,6 +71,15 @@ alias g="gitui"
 alias tt="taskwarrior-tui"
 alias ter="zellij"
 n
+
+
+open-pdf() {
+  IFS=$'\n' currentpath=($(pwd))
+  cd ~/Documents/BOOK/ 
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0 --height 40%))
+  [[ -n "$files" ]] && zathura "${files[@]}" & disown
+  cd "${currentpath}"
+}
 
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then

@@ -47,9 +47,9 @@ focus_follows_mouse no
 
 # window border settings
 #1default_border          none
-default_border          pixel 0
+default_border          pixel 1
 #default_border          none 
-default_floating_border pixel 0
+default_floating_border pixel 1
 
 # smart_borders on
 
