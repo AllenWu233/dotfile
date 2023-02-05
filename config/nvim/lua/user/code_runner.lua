@@ -19,7 +19,8 @@ code_runner.setup {
 		javascript = "node",
 		c = "cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
 		-- cpp = "cd $dir && g++ -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
-		cpp = "cd $dir && g++ -lboost_coroutine -lboost_context -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+		--[[ cpp = "cd $dir && g++ -fopenmp  -lboost_coroutine -lboost_context -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt", ]]
+		cpp = "make && make run",
 		tex = "cd $dir && xelatex $fileName",
     r = "cd $dir && radian ",
 	},
