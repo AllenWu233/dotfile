@@ -1,7 +1,7 @@
 # zmodload zsh/zprof
 
-export HISTSIZE=1000
-export EDITOR="nvim"
+# export HISTSIZE=1000
+#export EDITOR="nvim"
 
 autoload -U compaudit compinit
 autoload -U compinit && compinit
@@ -20,7 +20,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 #####################
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/autojump/autojump.zsh
+#source /usr/share/autojump/autojump.zsh
 ######################## 
 
 
@@ -70,6 +70,8 @@ alias ping="gping"
 alias g="gitui"
 alias tt="taskwarrior-tui"
 alias ter="zellij"
+alias rt="gummy -t 6500"
+alias dt="gummy -t 5400"
 n
 
 
@@ -81,13 +83,19 @@ open-pdf() {
   cd "${currentpath}"
 }
 
+open-pdf-cd() {
+  IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0 --height 40%))
+  [[ -n "$files" ]] && zathura "${files[@]}" & disown
+}
+alias op="open-pdf" 
+alias opc="open-pdf-cd"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 
- HISTFILE=$HOME/.zsh_history
+ HISTFILE=$HOME/.zsh/cache/zsh_history
  HISTSIZE=5000
  SAVEHIST=5000
 ## Settings for umask
@@ -97,8 +105,8 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 eval "$(zoxide init zsh)"
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
 autoload -U promptinit; promptinit
 #prompt spaceship
 # eval "$(starship init zsh)"
