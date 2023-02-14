@@ -13,7 +13,6 @@ require 'lspconfig'.grammarly.setup {
     clientId = 'client_BaDkMgx4X19X9UxxYRCXZo',
   },
 }
-require "user.lsp.null-ls"
 require "lsp_signature".setup{}
 require"fidget".setup{}
 
@@ -29,7 +28,9 @@ require'lspconfig'.pylsp.setup{}
 require'lspconfig'.r_language_server.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.cssls.setup{}
+require'lspconfig'.texlab.setup{}
 
+require "user.lsp.null-ls"
 --[[ local navic = require("nvim-navic") ]]
 --[[]]
 --[[ require("lspconfig").clangd.setup { ]]

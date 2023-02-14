@@ -88,4 +88,13 @@ M.on_attach = function(client, bufnr)
 	illuminate.on_attach(client)
 end
 
+require('goto-preview').setup {}
+vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
+
+local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not status_ok then
+  return
+end
+
+
 return M
