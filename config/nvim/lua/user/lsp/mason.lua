@@ -1,5 +1,5 @@
 local servers = {
-  --"clangd"
+"pyright" ,
 }
 
 local settings = {
