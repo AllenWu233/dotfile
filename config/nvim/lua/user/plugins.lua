@@ -101,7 +101,8 @@ use { "catppuccin/nvim", as = "catppuccin" }
   -- LSP
   use("neovim/nvim-lspconfig") -- enable LSP
   use('simrat39/rust-tools.nvim')
-  use("williamboman/nvim-lsp-installer") -- simple to use language server
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
   -- Telescope
   use("nvim-telescope/telescope.nvim")
