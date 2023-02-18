@@ -16,11 +16,8 @@ nvim_tree.setup {
     update_cwd = true,
   },
   sort_by = "case_sensitive",
-  --[[ renderer = { ]]
-  --[[   group_empty = true, ]]
-  --[[ }, ]]
+
   filters = {
-    -- dotfiles = true,
     dotfiles = false,
   },
   renderer = {
@@ -32,12 +29,8 @@ nvim_tree.setup {
         default = "",
         symlink = "",
         folder = {
-          -- arrow_open = "",
-          -- arrow_closed = "",
           arrow_open = "",
           arrow_closed = ">",
-          --[[ default = "always", ]]
-          --[[ open = "", ]]
           empty = "",
           empty_open = "",
           default = "",
@@ -46,16 +39,6 @@ nvim_tree.setup {
           symlink = "",
           symlink_open = "",
         },
-        -- folder = { 
-        --   arrow_open = "",
-        --   arrow_closed = "",
-        --   default = "",
-        --   open = "",
-        --   empty = "",
-        --   empty_open = "",
-        --   symlink = "",
-        --   symlink_open = "",
-        -- },
         git = {
           unstaged = "",
           staged = "S",
@@ -68,16 +51,7 @@ nvim_tree.setup {
       },
     },
   },
-  -- diagnostics = {
-  --   enable = true,
-  --   show_on_dirs = true,
-  --   icons = {
-  --     hint = "",
-  --     info = "",
-  --     warning = "",
-  --     error = "",
-  --   },
-  -- },
+
   view = {
     width = 30,
     --[[ height = 30, ]]
@@ -93,9 +67,7 @@ nvim_tree.setup {
 }
 
 require'nvim-web-devicons'.setup {
- -- your personnal icons can go here (to override)
- -- you can specify color or cterm_color instead of specifying both of them
- -- DevIcon will be appended to `name`
+
  override = {
   zsh = {
     icon = "",
@@ -104,7 +76,5 @@ require'nvim-web-devicons'.setup {
     name = "Zsh"
   }
  };
- -- globally enable default icons (default to false)
- -- will get overriden by `get_icons` option
  default = true;
 }

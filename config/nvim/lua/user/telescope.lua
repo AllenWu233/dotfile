@@ -92,42 +92,20 @@ telescope.setup {
     },
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
   },
   extensions = {
 
     undo = {
-      -- telescope-undo.nvim config, see below
     },
     ["ui-select"] = {
       require("telescope.themes").get_dropdown(dropdown_configs),
     },
-    --[[ require("telescope.themes").get_dropdown { ]]
-    --[[   -- even more opts ]]
-    --[[ } ]]
-    --[[ }, ]]
-
-
     media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
       filetypes = { "png", "webp", "jpg", "jpeg" },
       find_cmd = "rg" -- find command (defaults to `fd`)
     }
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
   },
 }
 require("telescope").load_extension("ui-select")
-
 require("telescope").load_extension("undo")
-require "telescope".load_extension("frecency")
+--[[ require "telescope".load_extension("frecency") ]]

@@ -1,5 +1,5 @@
 
-
+-- ################################################################### ufo setting 
 --[[ vim.o.foldcolumn = '0' -- '0' is not bad ]]
 --[[ vim.o.foldnestmax ="1" ]]
 --[[ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value ]]
@@ -73,7 +73,7 @@
 --[[   } ]]
 --[[    ]]
 --[[ ) ]]
---
+-- ########################################################################################
 require('hlslens').setup()
 
 local kopts = {noremap = true, silent = true}
@@ -137,7 +137,7 @@ wilder.set_option('renderer', wilder.wildmenu_renderer({
   highlighter = wilder.basic_highlighter(),
 }))
 
--- ####################################################################
+-- ######################################################################### wilder setting
 --[[ local wilder = require('wilder') ]]
 --[[ wilder.setup({modes = {':', '/', '?'}}) ]]
 --[[]]
@@ -185,3 +185,4 @@ wilder.set_option('renderer', wilder.wildmenu_renderer({
 --[[     }) ]]
 --[[   ), ]]
 --[[ }) ]]
+--###################################################################################
