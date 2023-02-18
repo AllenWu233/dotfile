@@ -6,7 +6,7 @@ export FZF_DEFAULT_OPTS="--color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg
 --color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B"
 
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
-export FZF_PREVIEW_COMMAND='bash ~/.zsh/file_preview.sh {}'
+export FZF_PREVIEW_COMMAND='sh ~/.zsh/file_preview.sh {}'
 # export FZF_COMPLETION_TRIGGER='\'
 
 zstyle ':completion:complete:*:options' sort false
@@ -28,4 +28,4 @@ zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
 zstyle ':fzf-tab:complete:*:*' fzf-flags --height=12
-export LESSOPEN='| bash $OMZ/lib/file_preview.sh %s'
+export LESSOPEN='| bash ~/.zsh/file_preview.sh %s'
