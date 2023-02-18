@@ -7,7 +7,7 @@ end
 require "user.lsp.mason"
 require("user.lsp.handlersmason").setup()
 require 'lspconfig'.grammarly.setup {
-  --[[ cmd = { "/home/charles/.npm-global/bin/grammarly-languageserver", "--stdio" }, ]]
+  cmd = { "grammarly-languageserver", "--stdio" },
   filetypes = {"tex", "markdown", "text" },
   init_options = {
     clientId = 'client_BaDkMgx4X19X9UxxYRCXZo',

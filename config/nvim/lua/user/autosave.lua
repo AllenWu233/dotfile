@@ -5,7 +5,7 @@ end
 
 autosave.setup(
   {
-        enabled = false,
+        enabled = true,
         events = {"InsertLeave", "TextChanged"},
         conditions = {
             exists = true,

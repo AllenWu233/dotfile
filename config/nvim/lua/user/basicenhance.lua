@@ -117,9 +117,6 @@ vim.api.nvim_set_keymap('n', 'n', 'n:lua require("specs").show_specs()<CR>', { n
 vim.api.nvim_set_keymap('n', 'N', 'N:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-f>', '<C-f>:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-b>', '<C-b>:lua require("specs").show_specs()<CR>', { noremap = true, silent = true })
---[[]]
-vim.api.nvim_set_keymap('n', '<C-b>', ':lua require("specs").show_specs()', { noremap = true, silent = true })
---#
 --
 --#region
 
