@@ -275,24 +275,11 @@ gaps outer 2
 # startup applications
 exec --no-startup-id xautolock -time 5 -locker '~/.config/i3/lock.sh'
 exec --no-startup-id dunst
-exec --no-startup-id sh ~/.config/i3/mon.sh
-#exec_always --no-startup-id feh --bg-fill ~/Pictures/arch.png
-#exec_always --no-startup-id feh --bg-fill ~/Pictures/archlinux.png
+exec --no-startup-id sh ~/.config/i3/gummy.sh
+#exec --no-startup-id sh ~/.config/i3/mon.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/nord1.png
-# exec_always --no-startup-id tail -f /tmp/xobpipe | xob -s default
-#exec_always sh ~/.config/i3/volume.sh
-#exec_always sh ~/.config/i3/brightness.sh
-exec_always --no-startup-id  sh ~/.config/i3/start.sh
-#exec_always --no-startup-id feh --bg-fill ~/Pictures/ign_lonely-man.png
-#exec_always --no-startup-id feh --bg-fill ~/Pictures/27b_r.jpg
-#exec_always --no-startup-id feh --bg-fill ~/Pictures/wallhaven-v9kw2m.jpg
-#exec_always --no-startup-id feh --bg-fill ~/Pictures/nordicdarker.jpg
-#exec_always --no-startup-id picom --config ~/.config/picom/picom.conf 
-
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf1
+#exec_always --no-startup-id  sh ~/.config/i3/start.sh
+#exec_always --no-startup-id picom --config ~/.config/picom/picom.conf1
 exec_always --no-startup-id fcitx5
 exec_always --no-startup-id bash ~/.config/polybar/launch.sh
-#exec_always --no-startup-id bash ~/.config/polybar/executable_launch.sh
 #exec_always --no-startup-id copyq
-# exec_always --no-startup-id feh --bg-fill ~/Pictures/nordicdarker.jpg  
-# exec_always --no-startup-id  scrot '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f'

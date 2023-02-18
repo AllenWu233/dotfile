@@ -31,7 +31,7 @@ require "user.filetype"
 --[[ require "user.biscuits" ]]
 require "user.lightbulb"
 require "user.highstr"
-require "user.true-zen"
+--[[ require "user.true-zen" ]]
 --
 
 --

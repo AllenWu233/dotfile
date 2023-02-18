@@ -1,5 +1,4 @@
 local servers = {
-"pyright" ,
 }
 
 local settings = {
