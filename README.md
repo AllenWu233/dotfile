@@ -31,7 +31,6 @@ You can use <code>config/i3/nord.sh</code>([nord](https://www.nordtheme.com/)) a
 - Shell: 
   - [fish](https://archlinux.org/packages/community/x86_64/fish/)
   - [zsh](https://archlinux.org/packages/extra/x86_64/zsh/)
-    - [autojump](https://aur.archlinux.org/packages/autojump)
     - [fzf-tab](https://github.com/Aloxaf/fzf-tab)
     - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
     - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
@@ -68,4 +67,4 @@ You can use <code>config/i3/nord.sh</code>([nord](https://www.nordtheme.com/)) a
   - [dolphin](https://archlinux.org/packages/extra/x86_64/dolphin/)
 - Screen shot: [flameshot](https://archlinux.org/packages/community/x86_64/flameshot/)
 - Startpage: [Bento](https://github.com/migueravila/Bento)
-
+- Temperature manager: [gummy](https://github.com/Fushko/gummy)
