@@ -98,7 +98,7 @@ return packer.startup(function(use)
     requires = { "kkharji/sqlite.lua" }
   }
   use "debugloop/telescope-undo.nvim"
-  
+
   -- Treesitter
   use({
     "nvim-treesitter/nvim-treesitter",
@@ -124,7 +124,7 @@ return packer.startup(function(use)
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons", }
 
-  -- useful features  
+  -- useful features
   use({ 'norcalli/nvim-colorizer.lua' })
   use({ 'ggandor/leap.nvim' })
   use({ 'ggandor/flit.nvim' })
@@ -146,16 +146,17 @@ return packer.startup(function(use)
   use 'nacro90/numb.nvim'
 
 
+  use { 'kaarmu/typst.vim', ft = { 'typ' } }
 
-  -- markdown 
+
+  -- markdown
   use("iamcco/mathjax-support-for-mkdp")
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = { "markdown" },
-  })
-
-
+  --[[ use({ ]]
+  --[[   "iamcco/markdown-preview.nvim", ]]
+  --[[   run = "cd app && npm install", ]]
+  --[[   ft = { "markdown" }, ]]
+  --[[ }) ]]
+  use { 'iamcco/markdown-preview.nvim' }
   -- ********************************************************************************
 
   --[[ use({ 'jakewvincent/mkdnflow.nvim', ]]

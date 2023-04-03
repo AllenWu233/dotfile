@@ -21,7 +21,7 @@ code_runner.setup {
 		-- cpp = "cd $dir && g++ -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
 		--[[ cpp = "cd $dir && g++ -fopenmp  -lboost_coroutine -lboost_context -std=c++20 $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt", ]]
 		cpp = "make && make run",
-		tex = "cd $dir && xelatex $fileName",
+		tex = "cd $dir && xelatex --shell-escape $fileName",
     r = "cd $dir && radian ",
 	},
 	project = {

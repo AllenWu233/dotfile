@@ -200,10 +200,8 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/charles/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    loaded = true,
+    path = "/home/charles/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
@@ -421,6 +419,13 @@ _G.packer_plugins = {
     path = "/home/charles/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
     url = "https://github.com/Pocco81/true-zen.nvim"
   },
+  ["typst.vim"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim",
+    url = "https://github.com/kaarmu/typst.vim"
+  },
   ["vim-bbye"] = {
     loaded = true,
     path = "/home/charles/.local/share/nvim/site/pack/packer/start/vim-bbye",
@@ -448,8 +453,13 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typ ++once lua require("packer.load")({'typst.vim'}, { ft = "typ" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
+vim.cmd [[source /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
+time([[Sourcing ftdetect script at: /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
