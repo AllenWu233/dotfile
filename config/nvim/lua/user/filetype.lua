@@ -37,7 +37,7 @@ filetype.setup({
         },
         function_literal = {
             Brewfile = function()
-                vim.cmd("syntax off")
+                --[[ vim.cmd("syntax off") ]]
             end,
         },
         function_complex = {

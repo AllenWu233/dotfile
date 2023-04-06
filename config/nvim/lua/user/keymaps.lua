@@ -84,7 +84,6 @@ keymap('n', '<leader>t' , ':TroubleToggle<cr>' , opts)
 --[[ keymap('c', ':Rusthint', "<cmd>lua require('rust-tools').inlay_hints.set()<CR>", opts) ]]
 vim.api.nvim_create_user_command('RustEnableInlayHints',"lua require('rust-tools').inlay_hints.set()",{})
 vim.api.nvim_create_user_command('RustDisableInlayHints',"lua require('rust-tools').inlay_hints.unset()",{})
-vim.api.nvim_create_user_command('Aer',"AerialToggle",{})
 vim.api.nvim_create_user_command('Spectre',"lua require('spectre').open()",{})
 vim.api.nvim_create_user_command('Spectrefile',"lua require('spectre').open_file_search()",{})
 vim.api.nvim_create_user_command("Format", 'lua vim.lsp.buf.format()',{})

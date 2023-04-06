@@ -12,7 +12,7 @@ require "user.nvim-tree"
 require "user.bufferline"
 require "user.lualine"
 require "user.project"
-require "user.impatient"
+-- require "user.impatient"
 require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
@@ -23,18 +23,14 @@ require "user.markdown"
 require "user.colorsizer"
 require "user.term"
 require "user.spectre"
---[[ require "user.aerial" ]]
 require "user.autosave"
 require "user.basicenhance"
 require "user.symbolsoutline"
-require "user.filetype"
+-- require "user.filetype"
 --[[ require "user.biscuits" ]]
 require "user.lightbulb"
 require "user.highstr"
-require "user.typst"
 --[[ require "user.true-zen" ]]
---
-
 --
 --[[ require "user.neodev" ]]
 
@@ -42,12 +38,4 @@ require('leap').add_default_mappings()
 require('leap').opts.highlight_unlabeled_phase_one_targets = true
 vim.keymap.set({'x', 'o', 'n'}, 'r', '<Plug>(leap-forward-to)')
 vim.keymap.set({'x', 'o', 'n'}, 'R', '<Plug>(leap-backward-to)')
---[[ require('flit').setup { ]]
---[[   keys = { f = 'f', F = 'F', t = 't', T = 'T' }, ]]
---[[   -- A string like "nv", "nvo", "o", etc. ]]
---[[   labeled_modes = "v", ]]
---[[   multiline = true, ]]
---[[   -- Like `leap`s similar argument (call-specific overrides). ]]
---[[   -- E.g.: opts = { equivalence_classes = {} } ]]
---[[   opts = {} ]]
---[[ } ]]
+

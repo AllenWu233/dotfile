@@ -82,12 +82,12 @@ return packer.startup(function(use)
   -- LSP
   use("neovim/nvim-lspconfig") -- enable LSP
   use('simrat39/rust-tools.nvim')
-  use "williamboman/mason.nvim" -- simple to use language server installer
-  use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+  -- use "williamboman/mason.nvim" -- simple to use language server installer
+  -- use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
   use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
   use { "ray-x/lsp_signature.nvim", }
   use 'j-hui/fidget.nvim'
-  use "SmiteshP/nvim-navic"
+  -- use "SmiteshP/nvim-navic"
 
   -- Telescope
   use("nvim-telescope/telescope.nvim")
@@ -151,11 +151,7 @@ return packer.startup(function(use)
 
   -- markdown
   use("iamcco/mathjax-support-for-mkdp")
-  --[[ use({ ]]
-  --[[   "iamcco/markdown-preview.nvim", ]]
-  --[[   run = "cd app && npm install", ]]
-  --[[   ft = { "markdown" }, ]]
-  --[[ }) ]]
+
   use { 'iamcco/markdown-preview.nvim' }
   -- ********************************************************************************
 

@@ -204,16 +204,6 @@ _G.packer_plugins = {
     path = "/home/charles/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
-  ["mason-lspconfig.nvim"] = {
-    loaded = true,
-    path = "/home/charles/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
-    url = "https://github.com/williamboman/mason-lspconfig.nvim"
-  },
-  ["mason.nvim"] = {
-    loaded = true,
-    path = "/home/charles/.local/share/nvim/site/pack/packer/start/mason.nvim",
-    url = "https://github.com/williamboman/mason.nvim"
-  },
   ["mathjax-support-for-mkdp"] = {
     loaded = true,
     path = "/home/charles/.local/share/nvim/site/pack/packer/start/mathjax-support-for-mkdp",
@@ -283,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/charles/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-navic"] = {
-    loaded = true,
-    path = "/home/charles/.local/share/nvim/site/pack/packer/start/nvim-navic",
-    url = "https://github.com/SmiteshP/nvim-navic"
   },
   ["nvim-spectre"] = {
     loaded = true,
@@ -457,9 +442,9 @@ vim.cmd [[au FileType typ ++once lua require("packer.load")({'typst.vim'}, { ft 
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], true)
-vim.cmd [[source /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]]
-time([[Sourcing ftdetect script at: /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/ftdetect/typst.vim]], false)
+time([[Sourcing ftdetect script at: /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/after/ftdetect/typst.vim]], true)
+vim.cmd [[source /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/after/ftdetect/typst.vim]]
+time([[Sourcing ftdetect script at: /home/charles/.local/share/nvim/site/pack/packer/opt/typst.vim/after/ftdetect/typst.vim]], false)
 vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
