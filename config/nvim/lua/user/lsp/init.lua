@@ -4,7 +4,7 @@ if not status_ok then
 end
 local util = require 'lspconfig/util'
 -- require "user.lsp.mason"
--- require("user.lsp.handlersmason").setup()
+require("user.lsp.handlersmason").setup()
 
 require "lsp_signature".setup {}
 require "fidget".setup {}

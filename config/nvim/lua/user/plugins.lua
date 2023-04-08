@@ -146,7 +146,7 @@ return packer.startup(function(use)
   use 'nacro90/numb.nvim'
 
 
-  use { 'kaarmu/typst.vim', ft = { 'typ' } }
+  --[[ use { 'kaarmu/typst.vim', ft = { 'typ' } } ]]
 
 
   -- markdown
