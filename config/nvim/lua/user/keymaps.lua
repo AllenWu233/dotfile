@@ -10,13 +10,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
+
 
 -- Normal --
 -- Better window navigation
@@ -40,7 +34,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
@@ -60,17 +54,13 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+
+keymap("n", "<leader>f",
+  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+  opts)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n","<leader>ca" ,"<cmd>lua  require('telescope.builtin').lsp_code_actions(:with)<CR>",opts)
+keymap("n", "<leader>ca", "<cmd>lua  require('telescope.builtin').lsp_code_actions(:with)<CR>", opts)
 
 
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -79,29 +69,21 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap('n', '<leader>rf', ':w<Esc>:RunFile<CR>', opts)
 keymap('n', '<leader>rc', ':RunClose<CR>', opts)
 
-keymap('n', '<leader>t' , ':TroubleToggle<cr>' , opts)
---[[ com hint lua require('rust-tools').inlay_hints.set()  ]]
---[[ keymap('c', ':Rusthint', "<cmd>lua require('rust-tools').inlay_hints.set()<CR>", opts) ]]
-vim.api.nvim_create_user_command('RustEnableInlayHints',"lua require('rust-tools').inlay_hints.set()",{})
-vim.api.nvim_create_user_command('RustDisableInlayHints',"lua require('rust-tools').inlay_hints.unset()",{})
-vim.api.nvim_create_user_command('Spectre',"lua require('spectre').open()",{})
-vim.api.nvim_create_user_command('Spectrefile',"lua require('spectre').open_file_search()",{})
-vim.api.nvim_create_user_command("Format", 'lua vim.lsp.buf.format()',{})
+keymap('n', '<leader>t', ':TroubleToggle<cr>', opts)
+vim.api.nvim_create_user_command('RustEnableInlayHints', "lua require('rust-tools').inlay_hints.set()", {})
+vim.api.nvim_create_user_command('RustDisableInlayHints', "lua require('rust-tools').inlay_hints.unset()", {})
+vim.api.nvim_create_user_command('Spectre', "lua require('spectre').open()", {})
+vim.api.nvim_create_user_command('Spectrefile', "lua require('spectre').open_file_search()", {})
+vim.api.nvim_create_user_command("Format", 'lua vim.lsp.buf.format()', {})
 
 
-	keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	keymap("n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	keymap("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
-	keymap("n", "<leader>li", "<cmd>LspInfo<cr>", opts)
-	keymap("n", "<leader>lI", "<cmd>LspInstallInfo<cr>", opts)
-	keymap("n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-	keymap("n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
-	keymap("n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
-	keymap("n", "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-	keymap("n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-	keymap("n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
+keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts)
+keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+keymap("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts)
+keymap("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", opts)
+keymap("n", "<leader>lj", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+keymap("n", "<leader>lk", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
+keymap("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts)
