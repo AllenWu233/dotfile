@@ -56,7 +56,7 @@ You can use <code>config/i3/nord.sh</code>([nord](https://www.nordtheme.com/)) a
   - [catppuccin-kvantum](https://github.com/catppuccin/Kvantum)
 - Icon theme: [Zafiro-Nord-Dark-Black](https://www.gnome-look.org/p/1166289/)
 - Cursor Theme: [Nordic cursors](https://store.kde.org/p/1662218/)  See details in [archwiki-cursor](https://wiki.archlinux.org/title/Cursor_themes)
-- Firefox Theme: [minimal-functional-fox](https://github.com/mut-ex/minimal-functional-fox)
+- ~~Firefox Theme: [minimal-functional-fox ](https://github.com/mut-ex/minimal-functional-fox)~~(bugs after version 113.0)
 - Fcitx5 Theme: 
   - [nord](https://github.com/tonyfettes/fcitx5-nord)
   - [catppuccin](https://github.com/catppuccin/fcitx5)
