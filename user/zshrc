@@ -66,13 +66,13 @@ open-pdf() {
   IFS=$'\n' currentpath=($(pwd))
   cd ~/Documents/BOOK/ 
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0 --height 40%))
-  [[ -n "$files" ]] && zathura "${files[@]}" & disown
+  [[ -n "$files" ]] && zathura 2>/dev/null "${files[@]}" & disown
   cd "${currentpath}"
 }
 
 open-pdf-cd() {
   IFS=$'\n' files=($(fzf-tmux --query="$1" --multi --select-1 --exit-0 --height 40%))
-  [[ -n "$files" ]] && zathura "${files[@]}" & disown
+  [[ -n "$files" ]] && zathura 2>/dev/null "${files[@]}" & disown
 }
 alias op="open-pdf" 
 alias opc="open-pdf-cd"
