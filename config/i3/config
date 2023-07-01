@@ -223,6 +223,7 @@ for_window [class="Lxappearance"] floating enable
 for_window [class="Qalculate-gtk"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [class="Steam"] floating enable
+for_window [class="steam"] floating enable
 for_window [class="words-picker"] floating enable
 for_window [class="icalingua"] floating enable
 for_window [class="stacer"] floating enable
@@ -246,6 +247,8 @@ for_window [class="Kvantum Manager"] floating enable
 for_window [class="cmake-gui"] floating enable
 for_window [class="CMakeSetup"] floating enable
 for_window [class="feh"] floating enable
+for_window [class="Tlp-UI"] floating enable
+for_window [class="steamwebhelper"] floating enable
 # i3-gaps
 # smart_gaps off
 gaps inner 8
