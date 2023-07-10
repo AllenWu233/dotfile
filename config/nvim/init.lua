@@ -1,5 +1,5 @@
-require("impatient")
-
+vim.loader.enable()
+require("user.lazy")
 require("user.options")
 require("user.keymaps")
 
@@ -8,8 +8,9 @@ require("user.core")
 require("user.lsp")
 require("user.optional")
 require("user.lang")
+-- require("user.plugins")
 
-require("user.plugins")
+
 require("user.whichkey")
 
 require('leap').add_default_mappings()

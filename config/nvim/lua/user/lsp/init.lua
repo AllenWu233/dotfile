@@ -17,13 +17,13 @@ require 'lspconfig'.jdtls.setup {}
 require 'lspconfig'.lua_ls.setup {
 }
 require 'lspconfig'.marksman.setup {}
-require'lspconfig'.pyright.setup{}
+require 'lspconfig'.pyright.setup {}
 --[[ require 'lspconfig'.pylsp.setup {} ]]
 require 'lspconfig'.r_language_server.setup {}
-require 'lspconfig'.rust_analyzer.setup {}
+
 require 'lspconfig'.cssls.setup {}
 require 'lspconfig'.texlab.setup {
-  cmd = { "/home/charles/SourceFile/bin/texlab" },
+  --[[ cmd = { "/home/charles/SourceFile/bin/texlab" }, ]]
 }
 
 require 'lspconfig'.grammarly.setup {
@@ -38,12 +38,14 @@ require 'lspconfig'.grammarly.setup {
 
 
 require 'lspconfig'.typst_lsp.setup {
-  -- cmd = { "~/SourceFile/bin/typst-lsp" },
+  --[[ cmd = { "~/SourceFile/bin/typst-lsp" }, ]]
   filetypes = { "typst" },
   single_file_support = true,
   root_dir = util.find_git_ancestor,
 }
-
+require 'lspconfig'.rust_analyzer.setup {
+  cmd = { 'rustup run stable rust-analyzer' },
+}
 
 
 require "user.lsp.null-ls"

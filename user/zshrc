@@ -6,6 +6,7 @@
 autoload -U compaudit compinit
 autoload -U compinit && compinit
 
+eval "$(zoxide init zsh)"
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # source /usr/share/nvm/init-nvm.sh
@@ -91,7 +92,7 @@ setopt appendhistory
 setopt INC_APPEND_HISTORY  
 setopt SHARE_HISTORY
 
-eval "$(zoxide init zsh)"
+
 
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
