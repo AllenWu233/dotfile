@@ -38,7 +38,9 @@ require("lazy").setup({
     },
   },
   { 'akinsho/bufferline.nvim',            version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
-  'famiu/bufdelete.nvim',
+  --[[ 'famiu/bufdelete.nvim', ]]
+    {"ojroques/nvim-bufdel",lazy = false},
+
   'nvim-lualine/lualine.nvim',
   "ahmedkhalf/project.nvim",
   { "lukas-reineke/indent-blankline.nvim" },
@@ -148,7 +150,7 @@ require("lazy").setup({
     end
   },
   'edluffy/specs.nvim',
-  'gelguy/wilder.nvim',
+  {'gelguy/wilder.nvim',build = ':UpdateRemotePlugins'},
   { 'kevinhwang91/nvim-ufo',    dependencies = 'kevinhwang91/promise-async' },
   'kevinhwang91/nvim-hlslens',
   'nacro90/numb.nvim',
