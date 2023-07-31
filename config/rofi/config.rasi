@@ -2,6 +2,7 @@
 
 configuration {
   show-icons:         true;
+  font: "JetBrainsMono Nerd Font Mono 20";
   modi: "window,drun,ssh,run,filebrowser";
 }
 

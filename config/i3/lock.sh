@@ -12,7 +12,7 @@ verifying='#A3BE8CFF'  # verifying
 i3lock \
 --color=$background \
 \
---screen  \
+#--screen  \
 --indicator \
 --keylayout \
 --force-clock \
@@ -52,13 +52,13 @@ i3lock \
 \
 --verif-text=""          \
 --wrong-text=""          \
-# --clock               \
-# --timestr="%H:%M:%S"  \
-# --line-uses-inside       \
-# --datestr="%A, %m %Y" \
-# --textsize=20
-# --modsize=10
-#--time-font=noto-sans    \
-#--datefont=noto-sans    \
+--clock               \
+--timestr="%H:%M:%S"  \
+--line-uses-inside       \
+--datestr="%A, %m %Y" \
+--textsize=20 \
+--modsize=10 \
+--time-font=noto-sans    \
+--datefont=noto-sans    \
 # etc
 

@@ -1,4 +1,4 @@
-feh ~/Pictures/cutppuccin.png --bg-fill
+#feh ~/Pictures/cutppuccin.png --bg-fill
 
 cp ~/.config/alacritty/alacritty-cat.yml ~/.config/alacritty/alacritty.yml
 
